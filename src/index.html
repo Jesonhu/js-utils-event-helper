@@ -10,13 +10,13 @@
     <button id="btn">点击</button>
     <script src="./index.js"></script>
     <script>
-      console.log(jsUtilsHelper.core);
-      const displayObjectContainer = new jsUtilsHelper.core.DisplayObjectContainer();
-      displayObjectContainer.addEventListener('hello', onHello, this);
+      console.log(jsUtilsHelper);
+      const eventDispatcher1 = new jsUtilsHelper.EventDispatcher();
+      eventDispatcher1.addEventListener('hello', onHello, this);
   
       document.querySelector('#btn').addEventListener('click', () => {
         console.log('点击');
-        displayObjectContainer.dispatchEventWith('hello');
+        eventDispatcher1.dispatchEventWith('hello');
       });
   
       function onHello() {

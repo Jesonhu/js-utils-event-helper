@@ -1,14 +1,11 @@
-import Core from './Core/index';
+import { EventDispatcher } from './Core/events/EventDispatcher';
 /**
  * 常用工具合集.
  */
 declare const jsUtilsHelper: {
     /**
-     * 核心功能.
-     *
-     * @static
-     * @memberof JsUtilsHelper
+     * 事件监听派发类.
      */
-    core: typeof Core;
+    EventDispatcher: typeof EventDispatcher;
 };
 export default jsUtilsHelper;

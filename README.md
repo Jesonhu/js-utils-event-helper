@@ -1,5 +1,9 @@
 # JS 事件监听派发类(JS Event dispacher build with TS)
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/js-utils-event-helper"><img src="https://img.shields.io/npm/v/js-utils-event-helper.svg" alt="Version"></a>
+</p>
+
 en|[中文文档](./README_zh-CN.md)
 ## API
 

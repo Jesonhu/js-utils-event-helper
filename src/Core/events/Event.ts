@@ -32,8 +32,8 @@ export class Event extends HashObject {
     let hasEventPool = (EventClass as any).hasOwnProperty("eventPool");
     if (hasEventPool) {
       eventPool = EventClass.eventPool as Event[];
-    } else {
-      console.log('not have eventPoll');
+    } else { // 第一个绑定的事件处理
+      // Notice: 第一个事件监听添加时，eventPool还不存在隐藏需要创建一个空数组作为事件对象(或者叫做事件池)
       eventPool = EventClass.eventPool = [];
     }
 
@@ -98,7 +98,6 @@ export class Event extends HashObject {
     event.clean();
     const EventClass: any = Object.getPrototypeOf(event).constructor;
 
-    console.log('EventClass.eventPool', EventClass.eventPool);
     EventClass.eventPool.push(event);
   }
   // 静态方法和属性 end ===============================================
