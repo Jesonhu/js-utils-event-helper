@@ -1,18 +1,14 @@
 import Core from './Core/index';
+import { EventDispatcher } from './Core/events/EventDispatcher';
 /**
  * 常用工具合集.
  */
 const  jsUtilsHelper = {
   /**
-   * 核心功能.
-   *
-   * @static
-   * @memberof JsUtilsHelper
+   * 事件监听派发类.
    */
-  core: Core
+  EventDispatcher
 }
-
-// console.log('对象吗', jsUtilsHelper);
 
 // 打包处理 start ====================
 !(function webpackUniversalModuleDefinition(root: any, factory): void|any {
