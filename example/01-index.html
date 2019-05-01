@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>basic use</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+    <script src="https://unpkg.com/js-utils-event-helper"></script>
+    <script>
+      // console.log(jsUtilsHelper);
+      const eventDispatcher1 = new jsUtilsHelper.EventDispatcher();
+      eventDispatcher1.addEventListener('hello', onHello, this);
+  
+      document.querySelector('#btn').addEventListener('click', () => {
+        eventDispatcher1.dispatchEventWith('hello');
+      });
+  
+      function onHello(e) {
+        e = e || window.event;
+
+        console.log(e);
+        alert('hello');
+      }
+    </script>
+</body>
