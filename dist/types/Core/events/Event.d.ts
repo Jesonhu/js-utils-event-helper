@@ -83,6 +83,13 @@ export declare class Event extends HashObject {
      * @memberof Event
      */
     data: any;
+    /**
+     * 是否阻止默认事件.
+     *
+     * @private
+     * @type {boolean}
+     * @memberof Event
+     */
     private $isDefaultPrevented;
     isDefaultPrevented: boolean;
     /**

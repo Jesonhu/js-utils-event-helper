@@ -7,7 +7,8 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: "development",
-  devtool: "inline-source-map",
+  // @see 开启会在 .js 中生成source-map, 生成环境不需要使用.
+  // devtool: "inline-source-map",
   entry: "./src/index.ts",
   output: {
     filename: "index.js",
@@ -25,17 +26,17 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new htmlWebpackPlugin({
-      filename:'index.html',
-      template:'./src/index.html'//模板路径
-    }),
+    // new htmlWebpackPlugin({
+    //   filename:'index.html',
+    //   template:'./src/index.html'//模板路径
+    // }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     // new BundleAnalyzerPlugin()
   ],
   optimization: {
     // @see https://webpack.js.org/plugins/uglifyjs-webpack-plugin
-    // minimizer: [new UglifyJsPlugin()],
+    minimizer: [new UglifyJsPlugin()],
   },
   module: {
     rules: [
