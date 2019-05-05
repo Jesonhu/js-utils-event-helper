@@ -1,9 +1,12 @@
 import Core from './Core/index';
+import { Event } from './Core/events/Event';
 import { EventDispatcher } from './Core/events/EventDispatcher';
 /**
  * 常用工具合集.
  */
 const  jsUtilsHelper = {
+  /** 事件类 */
+  Event,
   /**
    * 事件监听派发类.
    */
