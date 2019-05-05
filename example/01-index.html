@@ -8,14 +8,22 @@
 </head>
 <body>
     <button id="btn">点击</button>
-    <script src="https://unpkg.com/js-utils-event-helper"></script>
+    <!-- <script src="https://unpkg.com/js-utils-event-helper"></script> -->
+    <script src="https://unpkg.com/js-utils-event-helper@0.2.0-beta.1/dist/index.js"></script>
     <script>
       console.log(jsUtilsHelper);
       const eventDispatcher1 = new jsUtilsHelper.EventDispatcher();
       eventDispatcher1.addEventListener('hello', onHello, this);
+      const event2 = new jsUtilsHelper.EventDispatcher();
+      event2.addEventListener('hello-event', (e) => {
+        console.log('hello-event', e);
+      }, this);
   
       document.querySelector('#btn').addEventListener('click', () => {
         eventDispatcher1.dispatchEventWith('hello');
+
+        const event2Type = jsUtilsHelper.Event['test'];
+        event2.dispatchEvent(event2Type);
       });
   
       function onHello(e) {
