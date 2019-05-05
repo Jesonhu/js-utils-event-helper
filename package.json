@@ -1,6 +1,6 @@
 {
   "name": "js-utils-event-helper",
-  "version": "v0.1.1",
+  "version": "v0.2.0-beta.1",
   "description": "JS Event dispacher build with TS",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
