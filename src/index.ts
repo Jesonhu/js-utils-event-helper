@@ -15,7 +15,6 @@ const  jsUtilsHelper = {
    */
   EventDispatcher
 }
-
 // 打包处理 start ====================
 !(function webpackUniversalModuleDefinition(root: any, factory): void|any {
 	if(typeof exports === 'object' && typeof module === 'object')
