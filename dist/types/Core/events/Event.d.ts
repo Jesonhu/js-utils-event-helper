@@ -9,6 +9,9 @@ import IEventDispatcher from './interface/IEventDispatcher';
 export declare class Event extends HashObject {
     constructor(type: string, bubbles?: boolean, cancelable?: boolean, data?: any);
     private init;
+    static TEST: string;
+    /** 默认事件的优先级标识 */
+    static DEFAULT_PRIORITY_LEVEL: number;
     static create<T extends Event>(EventClass: {
         new (type: string, bubbles?: boolean, cancelable?: boolean): T;
         eventPool?: Event[];

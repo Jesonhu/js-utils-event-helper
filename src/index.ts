@@ -2,6 +2,7 @@ import Core from './Core/index';
 import { Event } from './Core/events/Event';
 import { EventDispatcher } from './Core/events/EventDispatcher';
 import { EventTest } from './Core/EventTest';
+import { EventX } from './Core/events/EventX';
 /**
  * 常用工具合集.
  */
@@ -13,7 +14,10 @@ const  jsUtilsHelper = {
   /**
    * 事件监听派发类.
    */
-  EventDispatcher
+  EventDispatcher,
+
+  /** 通用事件监听派发类 */
+  EventX
 }
 // 打包处理 start ====================
 !(function webpackUniversalModuleDefinition(root: any, factory): void|any {

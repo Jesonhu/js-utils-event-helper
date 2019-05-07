@@ -12,25 +12,26 @@
     <script src="./dist/index.js"></script>
     <script>
       console.log(jsUtilsHelper);
-      const eventDispatcher1 = new jsUtilsHelper.EventDispatcher();
-      eventDispatcher1.addEventListener('hello', onHello, this);
-      const event2 = new jsUtilsHelper.EventDispatcher();
-      event2.addEventListener('hello-event', (e) => {
+      const eventDispatcher1 = new jsUtilsHelper.EventX();
+      eventDispatcher1.on('hello', onHello, this);
+      const event2 = new jsUtilsHelper.EventX();
+      event2.on('hello-event', (e) => {
         console.log('hello-event', e);
       }, this);
   
-      document.querySelector('#btn').addEventListener('click', () => {
-        eventDispatcher1.dispatchEventWith('hello');
+      document.querySelector('#btn').addEventListener('click', (e) => {
+        eventDispatcher1.trigger('hello');
 
-        const event2Type = jsUtilsHelper.Event['test'];
-        event2.dispatchEvent(event2Type);
+        console.log('dom event', e);
+
+        event2.trigger('hello-event');
       });
   
       function onHello(e) {
         e = e || window.event;
 
-        console.log(e);
-        alert('hello');
+        console.log('e', e);
+        // alert('hello');
       }
     </script>
 </body>

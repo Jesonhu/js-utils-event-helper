@@ -4,6 +4,8 @@
   <a href="https://www.npmjs.com/package/js-utils-event-helper"><img src="https://img.shields.io/npm/v/js-utils-event-helper.svg" alt="Version"></a>
 </p>
 
+> 什么情况下需要这个事件介绍和派发功能: 当非DOM对象时。DOM对象有自己的事件监听和派发实现。此事件类可以做非DOM对象的事件处理.
+
 [en](./README.md)|中文文档
 ## API
 

@@ -2,6 +2,9 @@ import HashObject from './HashObject';
 import EventPhase from './EventPhase';
 import IEventDispatcher from './interface/IEventDispatcher';
 
+/** 默认事件的优先级标识 */
+const DEFAULT_PRIORITY_LEVEL: number = 0;
+
 /**
  * Event 类作为创建事件实例的基类
  *
@@ -21,7 +24,9 @@ export class Event extends HashObject {
     this.data = data
   }
   // 静态方法和属性 start ===============================================
-  
+  public static TEST: string = 'TEST';
+  /** 默认事件的优先级标识 */
+  public static DEFAULT_PRIORITY_LEVEL: number = DEFAULT_PRIORITY_LEVEL;
   public static create<T extends Event>(
     EventClass: { new(type: string, bubbles?: boolean, cancelable?: boolean): T, eventPool?: Event[] },
     type: string,
